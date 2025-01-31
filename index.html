@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>کله شیطان 12 تجربی</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        select {
+            padding: 10px;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>به سایت کله شیطان 12 تجربی خوش آمدید</h1>
+    <p>برای دیدن ترکیب، یک گزینه را انتخاب کنید:</p>
+    <select id="options">
+        <option value="">انتخاب کنید</option>
+        <option value="1">1- درای</option>
+        <option value="2">2- افشار</option>
+        <option value="3">3- دردور</option>
+        <option value="4">4- ازفنداک</option>
+        <option value="5">5- دین نور</option>
+        <option value="6">6- یاسین</option>
+        <option value="7">7- بادزهره</option>
+        <option value="8">8- باقری</option>
+        <option value="9">9- یساره</option>
+        <option value="10">10- حسینی</option>
+        <option value="11">11- احمد نیا</option>
+        <option value="12">12- دریا</option>
+        <option value="13">13- نعیم فهیم</option>
+        <option value="14">14- بافتی</option>
+        <option value="15">15- برخورداران</option>
+        <option value="16">16- نوح</option>
+    </select>
+    <button onclick="showSelection()">نمایش ترکیب</button>
+    <p id="result"></p>
+
+    <script>
+        function showSelection() {
+            const select = document.getElementById("options");
+            const result = document.getElementById("result");
+            const selectedOption = select.options[select.selectedIndex].text;
+
+            if (selectedOption === "انتخاب کنید") {
+                result.textContent = "لطفا یک گزینه انتخاب کنید.";
+            } else {
+                result.textContent = "شما گزینه " + selectedOption + " را انتخاب کردید.";
+            }
+        }
+    </script>
+</body>
+</html>
