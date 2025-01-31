@@ -43,18 +43,16 @@
         <option value="16">16- نوح</option>
     </select>
     <button onclick="showSelection()">نمایش ترکیب</button>
-    <p id="result"></p>
 
     <script>
         function showSelection() {
             const select = document.getElementById("options");
-            const result = document.getElementById("result");
-            const selectedOption = select.options[select.selectedIndex].text;
+            const selectedValue = select.value;
 
-            if (selectedOption === "انتخاب کنید") {
-                result.textContent = "لطفا یک گزینه انتخاب کنید.";
+            if (selectedValue) {
+                window.open(selectedValue + ".html", "_blank");
             } else {
-                result.textContent = "شما گزینه " + selectedOption + " را انتخاب کردید.";
+                alert("لطفا یک گزینه انتخاب کنید.");
             }
         }
     </script>
